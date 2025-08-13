@@ -11,14 +11,12 @@
             "id": "47bb0f9d5430c42f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "this is a test!.md",
-                "mode": "source",
-                "source": false
+                "file": "how do folders work/Sublime Plants Diagram.png"
               },
-              "icon": "lucide-file",
-              "title": "this is a test!"
+              "icon": "lucide-image",
+              "title": "Sublime Plants Diagram"
             }
           }
         ]
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "this is a test!.md",
+                "file": "how do folders work/Sublime Plants Diagram.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for this is a test!"
+              "title": "Backlinks for Sublime Plants Diagram"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "this is a test!.md",
+                "file": "how do folders work/Sublime Plants Diagram.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from this is a test!"
+              "title": "Outgoing links from Sublime Plants Diagram"
             }
           },
           {
@@ -142,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "this is a test!.md",
+                "file": "how do folders work/Sublime Plants Diagram.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of this is a test!"
+              "title": "Outline of Sublime Plants Diagram"
             }
           }
         ]
@@ -168,10 +166,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "47bb0f9d5430c42f",
+  "active": "16868ebea54168e1",
   "lastOpenFiles": [
-    "Sublime Plants Diagram.png",
-    "README.md",
-    "this is a test!.md"
+    "how do folders work",
+    "this is a test!.md",
+    "how do folders work/Sublime Plants Diagram.png",
+    "README.md"
   ]
 }

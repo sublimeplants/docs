@@ -30,12 +30,6 @@ jobs:
         run: npx quartz build --directory ../vault
         working-directory: ./quartz  # Build from Quartz folder
 
-      - name: Debug
-        run: |
-          echo ${{ secrets.FTP_SERVER }}
-          echo ${{ secrets.FTP_USERNAME }}
-          echo ${{ secrets.FTP_PASSWORD }}
-
       - name: Deploy via SFTP
         uses: appleboy/scp-action@master
         with:

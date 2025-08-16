@@ -27,7 +27,7 @@ jobs:
         working-directory: ./quartz  # Quartz lives here
 
       - name: Build Quartz site
-        run: npx run build --directory ../vault
+        run: npx quartz build --directory ../vault
         working-directory: ./quartz  # Build from Quartz folder
 
       - name: Deploy via SFTP

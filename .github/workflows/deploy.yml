@@ -17,12 +17,15 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Copy config & layout
+        run: cp quartz.config.ts quartz.layout.ts quartz/
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./quartz  # Quartz lives here
 
       - name: Build Quartz site
-        run: npm run build
+        run: npx run build --directory ../vault
         working-directory: ./quartz  # Build from Quartz folder
 
       - name: Deploy via SFTP

@@ -23,7 +23,7 @@ jobs:
         run: cp quartz.config.ts quartz.layout.ts quartz/
 
       - name: Install dependencies
-        run: ls && cd quartz && npm i
+        run: npm i
         working-directory: ./quartz  # Quartz lives here
 
       - name: Build Quartz site

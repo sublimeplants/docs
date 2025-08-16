@@ -7,6 +7,9 @@ import * as Plugin from "./quartz/plugins"
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
 const config: QuartzConfig = {
+  build: {
+    prettyUrls: true,
+  }
   configuration: {
     pageTitle: "Quartz 4",
     pageTitleSuffix: "",

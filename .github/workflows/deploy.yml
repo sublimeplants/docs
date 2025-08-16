@@ -1,33 +1,36 @@
-name: Deploy Quartz Site
+name: Deploy Quartz Site via SFTP
 
 on:
   push:
     branches:
-      - main  # or 'master' — use the branch you push to
+      - main  # or your default branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Quartz runs well on Node 18+
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./quartz  # Quartz lives here
 
       - name: Build Quartz site
-        run: npm run build # or `quartz build` depending on your setup
+        run: npm run build
+        working-directory: ./quartz  # Build from Quartz folder
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public # adjust if Quartz output is somewhere else
-          server-dir: /path/to/your/site/root # adjust for DreamHost
+          port: 22
+          source: "quartz/public/*"   # where Quartz outputs static files
+          target: "/path/to/your/site/root"  # DreamHost dir for docs.sublimeplants.com

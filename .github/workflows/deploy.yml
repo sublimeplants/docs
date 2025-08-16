@@ -44,4 +44,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: "quartz/public/*"   # where Quartz outputs static files
-          target: "/home/dh_fm8qv6/docs.sublimeplants.com"  # DreamHost dir for docs.sublimeplants.com
+          target: "/home/dh_fm8qv6/docs.sublimeplants.com/"  # DreamHost dir for docs.sublimeplants.com
